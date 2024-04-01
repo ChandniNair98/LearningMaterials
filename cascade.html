@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* rule 1 */
+.subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+
+
+
+
+
+
+.subsection.header {
+  color: green;
+}
+
+.subsection#preview {
+  color: purple;
+}
+
+.subsection .innersubsection{
+  color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div > p {
+  background-color: yellow;
+}
+
+
+
+
+
+li ~ p{
+  background-color: cyan;
+}
+
+
+ul + p{
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- index.html -->
+
+<div class="main">
+    <div class="list subsection">Red text</div>
+  </div>
+  
+
+
+
+
+
+  <div>
+    <div class="subsection header">Latest Posts
+
+      <div class="innersubsection">
+        <p>hello this is from innersubsection</p>
+      </div>
+    </div>
+    <p class="subsection" id="preview">
+      This is where a preview for a post might go.
+    </p>
+  </div>
+  <ul>
+    <li><p>para1 in ul</p></li>
+    <li>para2 in ul</li>
+
+    <p>This the the para after li..~ means should come after</p>
+    <p>Another para after li..so ~ selects all after the predecessor but + is selecting only the immediate next one</p>
+  </ul>
+
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente odit, dolorum blanditiis voluptatibus non magni nostrum voluptatum asperiores -------------this comes after ul</p>
+
+  <p>This para also after ul....checking ul+p</p>
+</body>
+</html>
